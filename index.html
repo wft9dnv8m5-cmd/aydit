@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Налоговая самопроверка для ИП, самозанятых и ООО — бесплатно</title>
+<meta name="description" content="Бесплатный подбор налогового режима, самопроверка рисков, календарь платежей и шаблон ответа на требование ФНС для ИП, самозанятых и организаций.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@100..900&display=block" rel="stylesheet">
+<style>
+:root{--f:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;--ink:#000;--soft:#2e2e2e;--mute:#6b6b6b;--card:#f2f2f2;--row:#ededed;--ac:#38c6ec}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font:470 16px/1.45 var(--f);-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.nav{position:relative;z-index:50;margin:43px auto 0;width:min(880px,calc(100% - 32px));height:52px;background:#000;border-radius:26px;display:flex;align-items:center;padding:0 9px 0 26px;color:#fff}
+.wm{font-size:17.1px;font-weight:783;letter-spacing:-.0075em;text-decoration:none;display:flex;align-items:center;gap:8px}
+.wm svg{width:22px;height:21px}
+.menu{display:flex;align-items:center;gap:4px;margin-left:auto}
+.menu>a,.ddb{font:500 15px var(--f);letter-spacing:-.008em;color:#fff;text-decoration:none;background:none;border:0;padding:0 14px;height:52px;display:flex;align-items:center;cursor:pointer}
+.menu>a:hover,.ddb:hover,.dd.open .ddb{color:var(--ac)}
+.menu>a.cta{height:34px;background:#fff;color:#000;border-radius:17px;font-weight:577;margin-left:8px;padding:0 20px}
+.menu>a.cta:hover{background:var(--ac);color:#000}
+.dd{position:relative}
+.pn{display:none;position:absolute;top:100%;left:0;min-width:270px;background:#000;border-radius:20px;padding:10px;margin-top:8px}
+.pn::before{content:"";position:absolute;left:0;right:0;top:-10px;height:10px}
+.dd.open .pn{display:block}
+.dd:nth-last-of-type(-n+2) .pn{left:auto;right:0}
+.pn a{display:block;padding:11px 14px;border-radius:12px;color:#fff;text-decoration:none;font-weight:500;font-size:15px}
+.pn a:hover,.pn a:focus-visible{background:rgba(255,255,255,.1)}
+.bg{display:none;margin-left:auto;width:34px;height:34px;padding:0 7px;background:none;border:0;flex-direction:column;justify-content:center;gap:5px;cursor:pointer}
+.bg i{display:block;height:2px;background:#fff;border-radius:1px}
+.hero{text-align:center;padding:96px 16px 36px}
+h1{margin:0 auto;font-size:clamp(32px,5vw,55.7px);font-weight:470;letter-spacing:-.0572em;line-height:1.1;text-wrap:balance;max-width:20ch}
+.sub{margin:18px auto 0;max-width:52ch;font-size:16.1px;letter-spacing:-.02em;line-height:1.45}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:34px;padding:0 26px;border-radius:17px;background:#000;color:#fff;text-decoration:none;font-size:15px;font-weight:500;letter-spacing:-.02em;margin-top:28px;border:0;cursor:pointer;font-family:var(--f)}
+.btn:hover{background:var(--soft)}
+.wrap{position:relative;padding:0 16px 56px}
+.band{position:absolute;left:0;right:0;top:110px;bottom:0;overflow:hidden;background:#0db5ed}
+.band video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.card{position:relative;z-index:2;width:min(880px,100%);margin:0 auto;background:var(--card);border-radius:16px;padding:24px 20px 20px;box-shadow:0 0 0 1px rgba(255,255,255,.6),0 0 9px 3px rgba(255,255,255,.5),0 22px 64px rgba(2,72,105,.16)}
+.eb{font-size:15.8px;font-weight:388;letter-spacing:-.03em;margin:0 0 4px 6px}
+.ct{font-size:28px;font-weight:388;letter-spacing:-.057em;line-height:1.1;margin:0 0 18px 6px}
+.tabs{display:flex;flex-wrap:wrap;gap:0}
+.tb{font:388 14px var(--f);letter-spacing:-.03em;color:var(--mute);background:none;border:0;height:34px;padding:0 18px;cursor:pointer;position:relative}
+.tb[aria-selected=true]{background:#fff;color:var(--soft);font-weight:500;border-radius:8px 8px 0 0}
+.tb[aria-selected=true]::after{content:"";position:absolute;left:12px;right:12px;bottom:0;height:2px;background:var(--ac)}
+.pl{background:#fff;border-radius:0 8px 8px 8px;padding:22px}
+.pl[hidden]{display:none}
+h3{font-size:17px;font-weight:511;letter-spacing:-.02em;margin:0 0 12px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px 16px;margin-bottom:16px}
+label{display:block;font-size:13.5px;color:var(--mute);margin-bottom:4px}
+input,select,textarea{width:100%;font:470 15px var(--f);padding:10px 12px;border:1px solid var(--row);border-radius:8px;background:#fafafa;color:#000}
+textarea{min-height:90px;resize:vertical}
+.row{display:flex;gap:12px;padding:12px 14px;border:1px solid var(--row);border-radius:8px;margin-bottom:8px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.03);font-size:15px;cursor:default}
+label.row{cursor:pointer;color:#000;font-size:15px;margin-bottom:8px}
+.row input{width:18px;height:18px;flex:none;margin-top:2px;accent-color:#2a9a30}
+.row b{min-width:118px;font-weight:577}
+.row small{display:block;color:var(--mute);font-size:13.5px}
+.vd{font-size:20px;font-weight:500;letter-spacing:-.03em;line-height:1.25;margin:4px 0 12px}
+.ts{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:right;padding:10px 8px;border-bottom:1px solid var(--row)}
+th:first-child,td:first-child{text-align:left}
+th{font-weight:500;color:var(--mute);font-size:13px}
+tr.best td{background:rgba(56,198,236,.14);font-weight:577}
+tr.na td{color:var(--mute)}
+.nt{font-size:13.5px;color:var(--mute);margin:12px 0 0}
+.sc{padding:14px 16px;border-left:6px solid #f6a825;background:#fafafa;border-radius:0 8px 8px 0;margin:14px 0}
+.sc.low{border-color:#2a9a30}.sc.high{border-color:#d0402b}
+.sc b{font-size:19px;font-weight:577}
+.fx{margin:6px 0 0;padding-left:20px}.fx li{margin-bottom:6px}
+.sec{max-width:1040px;margin:0 auto;padding:0 16px}
+h2{font-size:clamp(26px,3.4vw,36px);font-weight:470;letter-spacing:-.05em;line-height:1.1;margin:56px 0 8px}
+.lead{color:var(--mute);max-width:60ch;margin:0 0 20px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0 24px;border-top:2px solid #000}
+.cols h3{margin:16px 0 8px}
+.cols a,.st a,.ext a{display:block;padding:8px 0;border-top:1px solid var(--row);text-decoration:none}
+.cols a:hover,.st a:hover,.ext a:hover{color:#0a87a8}
+.st article{display:grid;grid-template-columns:1fr 2fr;gap:6px 24px;padding:16px 0;border-bottom:1px solid var(--row)}
+.st{border-top:2px solid #000}
+.st h3{margin:0}.st p{margin:0 0 4px}
+.st a{display:inline;border:0;padding:0;color:#0a87a8;text-decoration:underline;margin-right:12px}
+.ext{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 28px}
+.ext span{display:block;font-size:13.5px;color:var(--mute)}
+.help{margin:56px auto 0;max-width:1040px;background:#000;color:#fff;border-radius:26px;padding:26px 30px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.help p{margin:0;max-width:56ch;font-size:16.1px}
+.help .btn{margin:0;background:#fff;color:#000;font-weight:577}
+footer{max-width:1040px;margin:48px auto 0;padding:24px 16px 40px;border-top:1px solid var(--row);font-size:13.5px;color:var(--mute)}
+.sm{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-bottom:18px}
+.sm h4{margin:0 0 6px;color:#000;font-weight:577;font-size:14px}.sm a{display:block;padding:3px 0;text-decoration:none}.sm a:hover{color:#0a87a8}
+@media(max-width:820px){.menu{display:none;position:absolute;top:calc(100% + 8px);right:0;flex-direction:column;align-items:stretch;background:#000;border-radius:20px;padding:10px;min-width:250px;gap:0}
+.nav.open .menu{display:flex}.bg{display:flex}.menu>a,.ddb{height:auto;padding:11px 14px}.menu>a.cta{text-align:center;justify-content:center;margin:6px 0 0}
+.dd{position:static}.pn{position:static;margin:0 0 6px;padding:0 0 0 12px}.pn::before{display:none}.st article{grid-template-columns:1fr}.hero{padding-top:64px}}
+@media(prefers-reduced-motion:reduce){.band video{display:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav" aria-label="Разделы">
+<a class="wm" href="#top"><svg viewBox="0 0 26 25" fill="none" aria-hidden="true"><circle cx="13" cy="12.5" r="10" stroke="#38c6ec" stroke-width="5"/></svg>НалогПроверка</a>
+<button class="bg" id="bg" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+<div class="menu" id="menu"></div>
+</nav>
+
+<header class="hero" id="top">
+<h1>Проверьте налоги и подберите режим бесплатно</h1>
+<p class="sub">Для самозанятых, ИП и организаций. Расчёты идут прямо в браузере: введённые цифры никуда не отправляются.</p>
+<a class="btn" href="#tools">Начать</a>
+</header>
+
+<div class="wrap">
+<div class="band"><video autoplay muted loop playsinline poster="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260826_125039_45a71f04-36dd-4620-99d8-7526316d439e.png" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260826_125119_4963ddd4-c287-4044-b014-b68943cdd8bd.mp4"></video></div>
+<div class="card" id="tools">
+<p class="eb">Бесплатные инструменты</p><p class="ct">Налоги: посчитать, проверить, не пропустить</p>
+<div class="tabs" role="tablist">
+<button class="tb" role="tab" id="t1" aria-selected="true" aria-controls="p1">Подбор режима</button>
+<button class="tb" role="tab" id="t2" aria-selected="false" aria-controls="p2">Самопроверка</button>
+<button class="tb" role="tab" id="t3" aria-selected="false" aria-controls="p3">Календарь</button>
+<button class="tb" role="tab" id="t4" aria-selected="false" aria-controls="p4">Ответ на требование</button>
+</div>
+
+<section class="pl" id="p1" role="tabpanel" aria-labelledby="t1">
+<div class="g">
+<div><label for="type">Кто вы</label><select id="type"><option value="self">Самозанятый (без ИП)</option><option value="ip" selected>ИП</option><option value="org">ООО</option></select></div>
+<div><label for="inc">Доход за год, ₽</label><input type="number" id="inc" min="0" step="10000" value="3000000"></div>
+<div><label for="exp">Подтверждённые расходы за год, ₽</label><input type="number" id="exp" min="0" step="10000" value="1000000"></div>
+<div><label for="share">Доля доходов от юрлиц и ИП, %</label><input type="number" id="share" min="0" max="100" value="50"></div>
+</div>
+<label class="row" style="border:0;padding:0 0 14px;box-shadow:none"><input type="checkbox" id="staff"><span>Есть наёмные сотрудники</span></label>
+<p class="vd" id="vd" aria-live="polite"></p>
+<div class="ts"><table><thead><tr><th>Режим</th><th>Налог</th><th>Взносы ИП</th><th>НДС</th><th>Итого</th><th>От дохода</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p class="nt" id="nt"></p>
+</section>
+
+<section class="pl" id="p2" role="tabpanel" aria-labelledby="t2" hidden>
+<h3>Отметьте, что относится к вашему бизнесу</h3>
+<div id="qs"></div>
+<div class="sc" id="sc" aria-live="polite"></div>
+<ul class="fx" id="fx"></ul>
+</section>
+
+<section class="pl" id="p3" role="tabpanel" aria-labelledby="t3" hidden>
+<h3>Ближайшие сроки</h3>
+<div class="g"><div><label for="reg">Режим налогообложения</label><select id="reg"><option value="npd">НПД (самозанятый)</option><option value="usn" selected>УСН</option><option value="osno">ОСНО</option></select></div></div>
+<div id="cal"></div>
+<p class="nt">Тип (самозанятый, ИП, ООО) берётся из вкладки «Подбор режима». Учтён перенос сроков с выходных, праздники не учтены. Платежи вносятся единым налоговым платежом до 28 числа, уведомление об исчисленных налогах подаётся до 25 числа. Сверьте даты с календарём ФНС.</p>
+</section>
+
+<section class="pl" id="p4" role="tabpanel" aria-labelledby="t4" hidden>
+<h3>Шаблон ответа на требование о представлении документов</h3>
+<div class="g">
+<div><label for="d_who">Кто отвечает (ФИО или название)</label><input id="d_who"></div>
+<div><label for="d_inn">ИНН</label><input id="d_inn" inputmode="numeric"></div>
+<div><label for="d_ins">Инспекция (например, ИФНС №…)</label><input id="d_ins"></div>
+<div><label for="d_num">Номер требования</label><input id="d_num"></div>
+<div><label for="d_date">Дата требования</label><input id="d_date" type="date"></div>
+</div>
+<label for="d_list">Что прикладываете (по одному документу в строке)</label><textarea id="d_list"></textarea>
+<label for="out" style="margin-top:14px">Готовый текст</label><textarea id="out" readonly style="min-height:210px"></textarea>
+<button class="btn" type="button" id="cp" style="margin-top:14px">Скопировать</button> <button class="btn" type="button" id="dl" style="margin-top:14px">Скачать .txt</button>
+<p class="nt">Это шаблон, а не юридическая консультация. Если каких-то документов нет, ответьте письменно и объясните причину: оставлять требование без ответа нельзя.</p>
+</section>
+</div>
+</div>
+
+<div class="sec" id="services"><h2>Направления</h2><p class="lead">Четыре области, в которых сервис помогает разобраться самостоятельно.</p><div class="cols" id="cols"></div></div>
+<div class="sec" id="sit"><h2>Когда пригодится проверка</h2><p class="lead">Типичные ситуации и с чего начать. Порядок и сроки зависят от конкретного случая, поэтому проверяйте их в Налоговом кодексе.</p><div class="st" id="st"></div></div>
+<div class="sec" id="links"><h2>Официальные сервисы</h2><p class="lead">Ресурсы, которыми пользуются предприниматели и бухгалтеры каждый день.</p><div class="ext" id="ext"></div></div>
+<!-- Место под рекламный блок (Яндекс РСЯ / AdSense) -->
+<div id="ad-slot"></div>
+
+<div class="help" id="help"><p>Если самопроверка показала риски или пришло требование от налоговой, покажите документы живому специалисту.</p><a class="btn" href="mailto:you@example.com?subject=Вопрос%20по%20налогам">Написать нам</a></div>
+<footer><div class="sm" id="sm"></div><p>Сервис справочный и не является аудиторским заключением или налоговой консультацией. Расчёты упрощены: не учтены патент, региональные льготы, вычеты по НДС и индивидуальные обстоятельства. Параметры актуальны для <span id="yr"></span> года; перед решением сверьтесь с ФНС или бухгалтером.</p></footer>
+
+<script>
+const $=id=>document.getElementById(id),rub=n=>Math.round(n).toLocaleString('ru-RU')+' ₽';
+const CFG={year:2026,npd:{lim:2400000,ph:.04,lg:.06},usn:{lim:490500000,r6:.06,r15:.15,min:.01},vat:{free:20000000,l5:272500000,r5:.05,r7:.07},ip:{fix:57390,pct:.01,thr:300000,cap:321818},nd:[[2400000,.13],[5000000,.15],[20000000,.18],[50000000,.2],[Infinity,.22]],prof:.25};
+$('yr').textContent=CFG.year;
+// ===== Данные для меню и ссылок =====
+const N='https://www.nalog.gov.ru/';
+const DIRS=[
+['Отчётность','Проверка отчётности',[['Самопроверка налоговых рисков','#tools','t2'],['Проверка контрагента','https://pb.nalog.ru/'],['Выписка из ЕГРЮЛ и ЕГРИП','https://egrul.nalog.ru/'],['Сальдо ЕНС и задолженность',N]]],
+['Налоги','Налоговый консалтинг',[['Подбор налогового режима','#tools','t1'],['Календарь платежей','#tools','t3'],['Регистрация самозанятого (НПД)','https://npd.nalog.ru/'],['Личный кабинет ИП','https://lkip2.nalog.ru/'],['Личный кабинет юрлица','https://lkul.nalog.ru/']]],
+['Финансы','Финансовый консалтинг',[['Расчёт налоговой нагрузки','#tools','t1'],['Минфин России','https://minfin.gov.ru/'],['Банк России: ключевая ставка','https://www.cbr.ru/'],['Корпорация МСП: поддержка','https://smbn.ru/']]],
+['Право','Правовой консалтинг',[['Шаблон ответа на требование ФНС','#tools','t4'],['КонсультантПлюс','https://www.consultant.ru/'],['Гарант','https://www.garant.ru/'],['Картотека арбитражных дел','https://kad.arbitr.ru/']]]];
+const SIT=[
+['Пришло требование от ФНС','Найдите документ в личном кабинете, проверьте срок ответа и список бумаг. Не игнорируйте требование, даже если считаете его ошибочным.',[['Шаблон ответа','#tools','t4'],['Кабинет юрлица','https://lkul.nalog.ru/']]],
+['Идёт камеральная проверка','Обычно она следует за сдачей декларации. Подготовьте первичку и пояснения по строкам, которые могут вызвать вопросы.',[['Самопроверка','#tools','t2'],['Налоговый кодекс','https://www.consultant.ru/']]],
+['Заблокирован счёт или есть долг','Сверьте сальдо единого налогового счёта, найдите начисление и погасите долг. Проверьте, что поданы все уведомления и декларации.',[['Сервисы ФНС',N]]],
+['Доход приближается к лимиту','Для НПД, УСН и освобождения от НДС действуют пороги. Посчитайте нагрузку до того, как лимит будет превышен.',[['Сравнить режимы','#tools','t1']]],
+['Проверка контрагента','Посмотрите данные в ЕГРЮЛ и сведения о рисках. Сохраните результат проверки вместе с договором.',[['Прозрачный бизнес','https://pb.nalog.ru/'],['ЕГРЮЛ','https://egrul.nalog.ru/']]],
+['Нужна судебная практика','Найдите похожие споры с налоговыми органами и посмотрите, какие доводы суды принимали.',[['Арбитражные дела','https://kad.arbitr.ru/'],['Гарант','https://www.garant.ru/']]]];
+const EXT=[['ФНС России','Сайт, сервисы и разъяснения',N],['НПД','Регистрация самозанятого','https://npd.nalog.ru/'],['Прозрачный бизнес','Проверка компаний и ИП','https://pb.nalog.ru/'],['ЕГРЮЛ и ЕГРИП','Выписки о юрлицах и ИП','https://egrul.nalog.ru/'],['ЕИС в сфере закупок','Тендеры по 44-ФЗ и 223-ФЗ','https://zakupki.gov.ru/'],['Госуслуги','Регистрация ИП, справки','https://www.gosuslugi.ru/'],['Социальный фонд','Взносы и выплаты','https://sfr.gov.ru/'],['Минфин России','Нормативные акты и письма','https://minfin.gov.ru/'],['КонсультантПлюс','Налоговый кодекс и законы','https://www.consultant.ru/'],['Картотека арбитражных дел','Судебные споры','https://kad.arbitr.ru/']];
+const A=([l,h,t])=>`<a href="${h}"${h[0]=='#'?'':' target="_blank" rel="noopener"'}${t?` data-tab="${t}"`:''}>${l}</a>`;
+$('menu').innerHTML=DIRS.map(d=>`<div class="dd"><button class="ddb" type="button" aria-expanded="false" aria-haspopup="true">${d[0]}</button><div class="pn">${d[2].map(A).join('')}</div></div>`).join('')
++`<div class="dd"><button class="ddb" type="button" aria-expanded="false" aria-haspopup="true">Ситуации</button><div class="pn">${SIT.map(s=>A([s[0],'#sit'])).join('')}</div></div><a href="#links">Сервисы</a><a class="cta" href="#help">Нужен специалист</a>`;
+$('cols').innerHTML=DIRS.map(d=>`<div><h3>${d[1]}</h3>${d[2].map(A).join('')}</div>`).join('');
+$('st').innerHTML=SIT.map(s=>`<article><h3>${s[0]}</h3><div><p>${s[1]}</p>${s[2].map(A).join('')}</div></article>`).join('');
+$('ext').innerHTML=EXT.map(e=>`<a href="${e[2]}" target="_blank" rel="noopener">${e[0]}<span>${e[1]}</span></a>`).join('');
+$('sm').innerHTML=DIRS.map(d=>`<div><h4>${d[1]}</h4>${d[2].slice(0,3).map(A).join('')}</div>`).join('')+`<div><h4>Разделы</h4><a href="#sit">Частые ситуации</a><a href="#links">Официальные сервисы</a><a href="#help">Контакты</a></div>`;
+
+// ===== Меню =====
+const dds=[...document.querySelectorAll('.dd')],hov=()=>matchMedia('(hover:hover) and (min-width:821px)').matches;
+const setDD=(d,o)=>{d.classList.toggle('open',o);d.querySelector('.ddb').setAttribute('aria-expanded',o)},closeDD=x=>dds.forEach(d=>d!==x&&setDD(d,false));
+dds.forEach(d=>{d.querySelector('.ddb').onclick=()=>{const o=hov()?true:!d.classList.contains('open');closeDD(d);setDD(d,o)};
+d.onmouseenter=()=>{if(hov()){closeDD(d);setDD(d,true)}};d.onmouseleave=()=>{if(hov())setDD(d,false)};
+d.addEventListener('focusout',e=>{if(!d.contains(e.relatedTarget)&&hov())setDD(d,false)})});
+const setNav=o=>{$('nav').classList.toggle('open',o);$('bg').setAttribute('aria-expanded',o);$('bg').setAttribute('aria-label',o?'Закрыть меню':'Открыть меню')};
+$('bg').onclick=e=>{e.stopPropagation();setNav(!$('nav').classList.contains('open'))};
+document.addEventListener('click',e=>{const a=e.target.closest('[data-tab]');if(a)$(a.dataset.tab).click();if(!e.target.closest('.dd'))closeDD();if(e.target.closest('.pn a,.menu>a')||!e.target.closest('#nav')){closeDD();setNav(false)}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeDD();setNav(false)}});
+
+// ===== Вкладки =====
+document.querySelectorAll('.tb').forEach(t=>t.onclick=()=>document.querySelectorAll('.tb').forEach(x=>{x.setAttribute('aria-selected',x===t);$(x.getAttribute('aria-controls')).hidden=x!==t}));
+
+// ===== Подбор режима =====
+const ndfl=b=>{let t=0,p=0;for(const[u,r]of CFG.nd){if(b>p)t+=(Math.min(b,u)-p)*r;p=u}return t};
+function calc(){
+ const type=$('type').value,inc=+$('inc').value||0,exp=+$('exp').value||0,sh=Math.min(100,+$('share').value||0)/100,staff=$('staff').checked,ip=type!=='org';
+ const one=b=>Math.min(CFG.ip.cap,Math.max(0,b-CFG.ip.thr)*CFG.ip.pct),c=ip?CFG.ip.fix+one(inc):0,c15=ip?CFG.ip.fix+one(inc-exp):0,vat=inc>CFG.vat.free?inc*(inc<=CFG.vat.l5?CFG.vat.r5:CFG.vat.r7):0,need=type==='self'?' (нужна регистрация ИП)':'',uok=inc<=CFG.usn.lim,R=[];
+ let w='';if(type==='org')w='недоступен для ООО';else if(inc>CFG.npd.lim)w='доход выше '+rub(CFG.npd.lim);else if(staff)w='нельзя иметь наёмных работников';
+ R.push({n:'НПД (самозанятый)',ok:!w,w,t:inc*(CFG.npd.ph*(1-sh)+CFG.npd.lg*sh),c:0,v:0});
+ let t6=inc*CFG.usn.r6;if(ip)t6=Math.max(0,t6-Math.min(c,t6*(staff?.5:1)));
+ R.push({n:'УСН «Доходы» 6%'+need,ok:uok,w:'доход выше лимита УСН',t:t6,c,v:vat});
+ R.push({n:'УСН «Доходы − расходы» 15%'+need,ok:uok,w:'доход выше лимита УСН',t:Math.max(Math.max(0,inc-exp-c15)*CFG.usn.r15,inc*CFG.usn.min),c:c15,v:vat});
+ R.push({n:(ip?'ОСНО (НДФЛ)':'ОСНО (налог на прибыль)')+need,ok:true,w:'',t:ip?ndfl(Math.max(0,inc-exp-c15)):CFG.prof*Math.max(0,inc-exp),c:c15,v:0,o:1});
+ R.forEach(r=>r.s=r.t+r.c+r.v);
+ const b=R.filter(r=>r.ok).reduce((a,x)=>x.s<a.s?x:a);
+ $('rows').innerHTML=R.map(r=>r.ok?`<tr class="${r===b?'best':''}"><td>${r.n}</td><td>${rub(r.t)}</td><td>${r.c?rub(r.c):'—'}</td><td>${r.v?rub(r.v):r.o?'22%, с вычетами':'—'}</td><td>${rub(r.s)}</td><td>${inc?(r.s/inc*100).toFixed(1)+'%':'—'}</td></tr>`:`<tr class="na"><td>${r.n}</td><td colspan="5" style="text-align:left">Недоступно: ${r.w}</td></tr>`).join('');
+ $('vd').textContent=inc?`Выгоднее всего: ${b.n.replace(/ \(нужна.*\)/,'')}, примерно ${rub(b.s)} в год`:'Введите доход, чтобы увидеть расчёт';
+ const n=[];if(vat)n.push(`Выше ${rub(CFG.vat.free)} на УСН появляется НДС (5% или 7% без вычетов либо 22% с вычетами); показан вариант 5%/7%.`);
+ if(ip)n.push(`Взносы ИП: ${rub(CFG.ip.fix)} + 1% с дохода выше ${rub(CFG.ip.thr)} (не больше ${rub(CFG.ip.cap)}). На УСН «Доходы − расходы» и ОСНО 1% считается с дохода за вычетом расходов.`);
+ if(type==='org')n.push('Для ООО не учтены взносы за сотрудников и дивиденды.');
+ n.push('НДС на ОСНО в итог не включён: он перекладывается на покупателя, входящий берётся к вычету.');
+ $('nt').textContent=n.join(' ');cal();
+}
+['type','inc','exp','share','staff'].forEach(i=>$(i).addEventListener('input',calc));
+
+// ===== Календарь =====
+function cal(){
+ const org=$('type').value==='org',r=$('reg').value,td=new Date();td.setHours(0,0,0,0);const y=td.getFullYear(),ev=[];
+ const add=(yy,m,d,x)=>{const dt=new Date(yy,m-1,d);while(dt.getDay()%6==0)dt.setDate(dt.getDate()+1);ev.push([dt,x])};
+ for(const yy of[y,y+1]){
+  if(r==='npd')for(let m=1;m<=12;m++)add(yy,m,28,'Налог НПД за прошлый месяц (сумма в приложении «Мой налог»)');
+  if(r==='usn'){[4,7,10].forEach(m=>add(yy,m,28,'Авансовый платёж по УСН'));const m=org?3:4;add(yy,m,25,'Декларация по УСН за прошлый год');add(yy,m,28,'Налог по УСН за прошлый год')}
+  if(r==='osno'){[4,7,10].forEach(m=>add(yy,m,28,org?'Авансовый платёж по налогу на прибыль':'Авансовый платёж по НДФЛ'));
+   for(let m=1;m<=12;m++)add(yy,m,28,'Платёж 1/3 НДС за прошлый квартал');[1,4,7,10].forEach(m=>add(yy,m,25,'Декларация по НДС'));
+   if(org){add(yy,3,25,'Декларация по налогу на прибыль за прошлый год');add(yy,3,28,'Налог на прибыль за прошлый год')}else{add(yy,4,30,'Декларация 3-НДФЛ за прошлый год');add(yy,7,15,'НДФЛ по декларации за прошлый год')}}
+  if(!org&&r!=='npd'){add(yy,12,28,'Фиксированные взносы ИП за текущий год');add(yy,7,1,'Взнос 1% с дохода выше 300 тыс. ₽ за прошлый год')}
+ }
+ $('cal').innerHTML=ev.filter(e=>e[0]>=td).sort((a,b)=>a[0]-b[0]).slice(0,10).map(e=>`<div class="row"><b>${e[0].toLocaleDateString('ru-RU',{day:'numeric',month:'long',year:'numeric'})}</b><span>${e[1]}</span></div>`).join('');
+}
+$('reg').addEventListener('input',cal);
+
+// ===== Самопроверка =====
+const Q=[[2,'Больше 80% дохода приносит один заказчик','ФНС может увидеть скрытые трудовые отношения. Проверьте договоры: у подрядчика должны быть свои сроки, инструменты и несколько клиентов.'],
+[2,'Самозанятые или подрядчики фактически выполняют работу штатных сотрудников','Оформите трудовые договоры или пересмотрите условия; риск — доначисление взносов и НДФЛ.'],
+[2,'Часть сделок с контрагентами, которых вы не проверяли','Проверяйте контрагентов в ЕГРЮЛ и «Прозрачном бизнесе», сохраняйте результат проверки.'],
+[2,'Нет подписанных актов или УПД по части услуг и поставок','Без первички расходы и вычеты легко снимают. Восстановите закрывающие документы.'],
+[2,'Бизнес разделён на несколько ИП или ООО одного вида деятельности','Дробление ради спецрежима — частая причина доначислений. У каждой структуры нужна деловая цель.'],
+[1,'Расчёты по бизнесу идут через личные карты или наличные','Разделите личные и рабочие деньги, ведите учёт поступлений на расчётном счёте.'],
+[1,'Налоговая нагрузка заметно ниже средней по отрасли','ФНС сравнивает нагрузку со средней по виду деятельности. Будьте готовы письменно объяснить разницу.'],
+[1,'Доход приближается к 20 млн ₽, а НДС вы не считали','Заранее сравните ставки 5%/7% и 22% и пересмотрите цены и договоры.'],
+[2,'Есть долг по налогам или пропущены уведомления и декларации','Проверьте сальдо ЕНС в личном кабинете, погасите долг и подайте пропущенные документы.'],
+[1,'Вы не храните документы, подтверждающие реальность сделок','Храните договоры, переписку и накладные минимум 4 года.']];
+$('qs').innerHTML=Q.map((q,i)=>`<label class="row"><input type="checkbox" data-i="${i}"><span>${q[1]}</span></label>`).join('');
+function audit(){const on=[...document.querySelectorAll('#qs input:checked')].map(x=>Q[+x.dataset.i]),s=on.reduce((a,q)=>a+q[0],0),l=s<=2?['low','Низкий риск']:s<=6?['mid','Средний риск']:['high','Высокий риск'];
+ $('sc').className='sc '+l[0];$('sc').innerHTML=`<b>${l[1]}</b><br>${on.length?`Отмечено пунктов: ${on.length}. Что сделать в первую очередь:`:'Пока ничего не отмечено — по этому списку рисков не выявлено.'}`;
+ $('fx').innerHTML=on.sort((a,b)=>b[0]-a[0]).map(q=>`<li><b>${q[1]}.</b> ${q[2]}</li>`).join('')}
+$('qs').addEventListener('input',audit);audit();
+
+// ===== Шаблон ответа на требование =====
+function doc(){const g=i=>$(i).value.trim()||'________',d=$('d_date').value?$('d_date').value.split('-').reverse().join('.'):'________';
+ $('out').value=`В ${g('d_ins')}\nОт: ${g('d_who')}, ИНН ${g('d_inn')}\n\nОтвет на требование № ${g('d_num')} от ${d} о представлении документов (информации)\n\nВ ответ на указанное требование направляем документы (информацию):\n${g('d_list')}\n\nДокументы представлены в копиях. Приложение: перечень документов на ___ л.\n\nДата: ____________     Подпись: ____________ / ${g('d_who')} /`}
+['d_who','d_inn','d_ins','d_num','d_date','d_list'].forEach(i=>$(i).addEventListener('input',doc));doc();
+$('cp').onclick=async()=>{try{await navigator.clipboard.writeText($('out').value);$('cp').textContent='Скопировано'}catch(e){$('out').select();document.execCommand('copy')}setTimeout(()=>$('cp').textContent='Скопировать',1500)};
+$('dl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([$('out').value],{type:'text/plain;charset=utf-8'}));a.download='otvet-na-trebovanie.txt';a.click();URL.revokeObjectURL(a.href)};
+calc();
+</script>
+</body>
+</html>
